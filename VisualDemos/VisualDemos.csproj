@@ -26,4 +26,15 @@
     <EmbeddedResource Include="Assets\Images\photo2.png" />
     <EmbeddedResource Include="Assets\Images\photo1.png" />
   </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Update="Views\CardKeyValue.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\Chips.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\ContextCardViewCell.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
 </Project>

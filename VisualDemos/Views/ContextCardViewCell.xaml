@@ -2,8 +2,9 @@
 <ViewCell xmlns="http://xamarin.com/schemas/2014/forms" 
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:local="clr-namespace:VisualDemos"          
+             xmlns:views="clr-namespace:VisualDemos.Views"          
              x:Class="VisualDemos.Views.ContextCardViewCell">
-    
+
     <Frame Padding="16" Margin="10" BackgroundColor="#FFFFFF" VerticalOptions="Start">
         <Frame.Resources>
             <ControlTemplate x:Key="testFrame">
@@ -11,13 +12,14 @@
                     <Label Text="Chemo" TextColor="White" HorizontalOptions="Center" VerticalOptions="Center" FontSize="16"/>
                 </Frame>
             </ControlTemplate>
+
         </Frame.Resources>
 
         <Grid RowSpacing="16">
             <Grid.RowDefinitions>
                 <RowDefinition Height="auto"/>
                 <RowDefinition Height="auto"/>
-                <RowDefinition Height="auto"/>
+                <RowDefinition Height="0.5"/>
                 <RowDefinition Height="auto"/>
             </Grid.RowDefinitions>
 
@@ -26,27 +28,51 @@
                     <ColumnDefinition Width="*"/>
                     <ColumnDefinition Width="auto"/>
                 </Grid.ColumnDefinitions>
-                <Label Text="Li Kin Kin 李健健" 
+                <Label Text="Li Kin Kin 李健健 [67Y]" 
                            Grid.Column="0"
                            FontSize="24" 
                            TextColor="{StaticResource TextColor}"/>
                 <Label Text="5 minutes ago" Grid.Column="1" VerticalOptions="Start" TextColor="Gray" Margin="0,5,0,0"/>
             </Grid>
-            <StackLayout Grid.Row="1">
+            <!--<StackLayout Grid.Row="1">
                 <FlexLayout  x:Name="chipsFlex" BackgroundColor="White" VerticalOptions="Start" JustifyContent="Start"  FlexLayout.Grow="1" Direction="Row" AlignItems="Start" AlignContent="Start" Wrap="Wrap">
 
                 </FlexLayout>
-            </StackLayout>
-            <StackLayout Grid.Row="2" Orientation="Horizontal" HorizontalOptions="Start">
-                <CheckBox IsChecked="true"                                                    
+            </StackLayout>-->
+
+            <StackLayout Grid.Row="1">
+                <FlexLayout Wrap="Wrap">
+                    <views:CardKeyValue Title="DR ID" Value="1234567890"/>
+                    <views:CardKeyValue Title="Sex" Value="M"/>
+                    <views:CardKeyValue Title="Visit ID" Value="9045198190"/>
+                    
+                    <views:CardKeyValue Title="Some Prop.." Value="1234567890"/>
+                    <views:CardKeyValue Title="Some Prop.." Value="ggewra"/>
+                    <views:CardKeyValue Title="Some Prop.." Value="90fef451awefweaf190"/>
+                    <!--<CheckBox IsChecked="true"                                                    
                       IsEnabled="false"
                       HorizontalOptions="CenterAndExpand" />
                 <Label Text="還我血汗錢!!!!!! " VerticalOptions="Center"
                            TextColor="{StaticResource TextColor}"
-                           FontSize="14" />
+                           FontSize="14" />-->
+                </FlexLayout>
             </StackLayout>
-            <Button Text="Diu" Grid.Row="3"
-                            HorizontalOptions="End" />
+
+
+            <!-- Dividers -->
+            <Frame Grid.Row="2" BackgroundColor="#E0E0E0" HeightRequest="0.5" HorizontalOptions="FillAndExpand"/>
+
+            <StackLayout Grid.Row="3">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"></ColumnDefinition>
+                        <ColumnDefinition Width="auto"></ColumnDefinition>
+                    </Grid.ColumnDefinitions>
+                <FlexLayout  Grid.Column="0" x:Name="chipsFlex" BackgroundColor="White" VerticalOptions="Start" JustifyContent="Start"  FlexLayout.Grow="1" Direction="Row" AlignItems="Start" AlignContent="Start" Wrap="Wrap">
+                </FlexLayout>
+                    <views:Chips Grid.Column="1" Background="{StaticResource  SecondaryColor}" Text="Need Action"/>
+                </Grid>
+            </StackLayout>
         </Grid>
     </Frame>
 </ViewCell>

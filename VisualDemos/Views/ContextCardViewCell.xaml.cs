@@ -16,11 +16,11 @@ namespace VisualDemos.Views
         {
             InitializeComponent();
 
-            chipsFlex.Children.Add(new Chips { Background = Color.Red, Text = "TEST@@" });
+            chipsFlex.Children.Add(new Chips { Text = "Default" });
 
         }
 
-        protected override async void OnBindingContextChanged()
+        protected override void OnBindingContextChanged()
         {
             base.OnBindingContextChanged();
             var context = this.BindingContext as Context;
