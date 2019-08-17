@@ -10,7 +10,7 @@ namespace VisualDemos
         {
             InitializeComponent();
 
-            MainPage = new NavigationPage(new MainPage());
+            MainPage = new NavigationPage(new CardPage());
         }
 
         protected override void OnStart()

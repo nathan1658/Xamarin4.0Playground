@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ViewCell xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:VisualDemos"          
+             x:Class="VisualDemos.Views.ContextCardViewCell">
+    
+    <Frame Padding="16" Margin="10" BackgroundColor="#FFFFFF" VerticalOptions="Start">
+        <Frame.Resources>
+            <ControlTemplate x:Key="testFrame">
+                <Frame Padding="18,8" HasShadow="False" CornerRadius="20"  BackgroundColor="{StaticResource PrimaryColor}" BorderColor="White" Margin="5">
+                    <Label Text="Chemo" TextColor="White" HorizontalOptions="Center" VerticalOptions="Center" FontSize="16"/>
+                </Frame>
+            </ControlTemplate>
+        </Frame.Resources>
+
+        <Grid RowSpacing="16">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="auto"/>
+            </Grid.RowDefinitions>
+
+            <Grid Grid.Row="0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="auto"/>
+                </Grid.ColumnDefinitions>
+                <Label Text="Li Kin Kin 李健健" 
+                           Grid.Column="0"
+                           FontSize="24" 
+                           TextColor="{StaticResource TextColor}"/>
+                <Label Text="5 minutes ago" Grid.Column="1" VerticalOptions="Start" TextColor="Gray" Margin="0,5,0,0"/>
+            </Grid>
+            <StackLayout Grid.Row="1">
+                <FlexLayout  x:Name="chipsFlex" BackgroundColor="White" VerticalOptions="Start" JustifyContent="Start"  FlexLayout.Grow="1" Direction="Row" AlignItems="Start" AlignContent="Start" Wrap="Wrap">
+
+                </FlexLayout>
+            </StackLayout>
+            <StackLayout Grid.Row="2" Orientation="Horizontal" HorizontalOptions="Start">
+                <CheckBox IsChecked="true"                                                    
+                      IsEnabled="false"
+                      HorizontalOptions="CenterAndExpand" />
+                <Label Text="還我血汗錢!!!!!! " VerticalOptions="Center"
+                           TextColor="{StaticResource TextColor}"
+                           FontSize="14" />
+            </StackLayout>
+            <Button Text="Diu" Grid.Row="3"
+                            HorizontalOptions="End" />
+        </Grid>
+    </Frame>
+</ViewCell>

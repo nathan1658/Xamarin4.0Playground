@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using VisualDemos.Models;
 using Xamarin.Forms;
 
 namespace VisualDemos
@@ -13,7 +14,7 @@ namespace VisualDemos
             };
             for (int i = 0; i < 50; i++)
             {
-                list.Add(new object());
+                list.Add(new Context { ChipVal = $"IT", Name = "Peter" + i });
             }
             testListView.ItemsSource = list;
             
