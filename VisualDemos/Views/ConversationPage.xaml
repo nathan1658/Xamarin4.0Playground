@@ -22,7 +22,7 @@
 
     </ContentPage.Resources>
     <ContentPage.Content>
-        <RelativeLayout HorizontalOptions="FillAndExpand"
+        <RelativeLayout HorizontalOptions="FillAndExpand" 
                         VerticalOptions="FillAndExpand">
 
             <ScrollView>
@@ -68,7 +68,7 @@
                     <view:MyCard
                         IsClippedToBounds="False"
                         Title="Lab report"
-                        x:Name="test2"                        >
+                        x:Name="test2">
                         <view:MyCard.InnerContent>
                             <ContentView>
                                 <WebView  HeightRequest="300"
@@ -83,6 +83,7 @@
                                 <StackLayout Orientation="Horizontal"
                                              Margin="0,5">
                                     <Button BackgroundColor="{StaticResource Key=PrimaryColor}"
+                                            x:Name="ExpandButton"
                                             Text="Expand"></Button>
 
                                 </StackLayout>

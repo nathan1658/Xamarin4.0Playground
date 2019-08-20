@@ -1,4 +1,5 @@
-﻿using Xamarin.Forms;
+﻿using VisualDemos.Views;
+using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
 [assembly: XamlCompilation(XamlCompilationOptions.Compile)]
@@ -10,7 +11,8 @@ namespace VisualDemos
         {
             InitializeComponent();
 
-            MainPage = new NavigationPage(new CardPage());
+            MainPage = new NavigationPage(new ConversationPage());
+            //MainPage = new NavigationPage(new CardPage());
         }
 
         protected override void OnStart()

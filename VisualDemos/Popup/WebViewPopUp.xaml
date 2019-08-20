@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<pages:PopupPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:pages="clr-namespace:Rg.Plugins.Popup.Pages;assembly=Rg.Plugins.Popup"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:view="clr-namespace:VisualDemos.Views"
+
+    xmlns:popup="clr-namespace:VisualDemos.Popup"
+    x:Class="VisualDemos.Popup.WebViewPopUp">
+
+
+    <pages:PopupPage.Content>
+        
+        <!--<WebView x:Name="webView" />-->
+    </pages:PopupPage.Content>
+</pages:PopupPage>

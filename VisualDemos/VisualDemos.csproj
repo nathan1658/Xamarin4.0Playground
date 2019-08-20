@@ -11,10 +11,13 @@
 
   <ItemGroup>
     <PackageReference Include="Xamarin.Forms" Version="4.1.0.555618" />
+    <PackageReference Include="Rg.Plugins.Popup" Version="1.1.5.188" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Assets\" />
     <Folder Include="Assets\Images\" />
+    <Folder Include="Popup\" />
+    <Folder Include="Animations\" />
   </ItemGroup>
   <ItemGroup>
     <None Remove="Assets\Images\photo3.png" />
