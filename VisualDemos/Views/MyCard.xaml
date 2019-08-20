@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+
+<Frame
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:view="clr-namespace:VisualDemos.Views"
+    x:Class="VisualDemos.Views.MyCard"
+    Visual="Material"
+    BackgroundColor="#FFFFFF"
+    Padding="16"
+    IsClippedToBounds="False"
+    Margin="10"
+    VerticalOptions="Start">
+
+    <StackLayout Spacing="0"
+                 IsClippedToBounds="False">
+        <!--<Frame BackgroundColor="{StaticResource Key=PrimaryColor}"
+               HorizontalOptions="FillAndExpand"
+               TranslationY="-25"
+               Padding="10"
+               VerticalOptions="Start">
+            <Label TextColor="white"
+                   x:Name="titleLabel"
+                   Text="Testing Title"></Label>
+        </Frame>-->
+        <Label Text="DEFAULT_TITLE"
+               x:Name="titleLabel"
+               FontSize="24"
+               TextColor="{StaticResource TextColor}" />
+
+        <ContentView x:Name="innerContent"
+                     VerticalOptions="Start">
+        </ContentView>
+
+        <Frame Padding="0"
+               Margin="0"
+               CornerRadius="0"
+               HasShadow="False"
+               HeightRequest="0.5"
+               BackgroundColor="gray" />
+
+        <StackLayout Orientation="Horizontal" Margin="0,5">
+            <Button BackgroundColor="{StaticResource Key=PrimaryColor}"
+                    Text="Action1"></Button>
+            <Button BackgroundColor="{StaticResource Key=PrimaryColor}"
+                    Text="Action2"></Button>
+        </StackLayout>
+    </StackLayout>
+
+
+
+
+</Frame>

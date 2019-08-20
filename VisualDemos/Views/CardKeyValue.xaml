@@ -3,7 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="VisualDemos.Views.CardKeyValue"
              BackgroundColor="Transparent"
-             Margin="10,5">
+             Margin="0,5,20,5">
   <ContentView.Content>
         <StackLayout VerticalOptions="Start">
             <Label x:Name="headerLabel" Margin="0,0,0,-5"  TextColor="{StaticResource HeaderTextColor}" Text="1234"/>

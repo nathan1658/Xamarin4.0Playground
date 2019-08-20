@@ -1,0 +1,199 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:view="clr-namespace:VisualDemos.Views"
+    x:Class="VisualDemos.Views.ConversationPage"
+    Visual="Material"
+    BackgroundColor="#fafafa">
+    <ContentPage.Resources>
+        <Style TargetType="Frame"
+               x:Key="testFrame">
+            <Setter Property="HeightRequest"
+                    Value="50" />
+            <Setter Property="WidthRequest"
+                    Value="50" />
+            <Setter Property="Margin"
+                    Value="10" />
+            <Setter Property="FlexLayout.AlignSelf"
+                    Value="Center" />
+
+        </Style>
+
+    </ContentPage.Resources>
+    <ContentPage.Content>
+
+        <ScrollView>
+
+
+
+            <StackLayout Orientation="Vertical"
+                         VerticalOptions="Start">
+
+
+
+                <FlexLayout Wrap="Wrap"
+                            AlignItems="Start"
+                            IsClippedToBounds="False"
+                            JustifyContent="Center">
+
+
+                    <Frame
+                        IsVisible="false"
+                        Visual="Material"
+                        BackgroundColor="#FFFFFF"
+                        Padding="16"
+                        IsClippedToBounds="False"
+                        Margin="10"
+                        VerticalOptions="Start">
+
+                        <StackLayout Spacing="0"
+                                     IsClippedToBounds="False">
+
+                            <Label Text="DEFAULT_TITLE"
+                                   x:Name="titleLabel"
+                                   FontSize="24"
+                                   TextColor="{StaticResource TextColor}" />
+
+                            <ContentView x:Name="innerContent"
+                                         VerticalOptions="Start"
+                                         HorizontalOptions="Center">
+
+                                <StackLayout VerticalOptions="Start">
+                                    <FlexLayout Wrap="Wrap">
+
+                                        <view:CardKeyValue Title="DR ID"
+                                                           Value="1234567890" />
+                                        <view:CardKeyValue Title="Sex"
+                                                           Value="M" />
+                                        <view:CardKeyValue Title="Visit ID"
+                                                           Value="9045198190" />
+
+                                        <view:CardKeyValue Title="Some Prop.."
+                                                           Value="1234567890" />
+                                        <view:CardKeyValue Title="Some Prop.."
+                                                           Value="ggewra" />
+                                        <view:CardKeyValue Title="Some Prop.."
+                                                           Value="90fef451awefweaf190" />
+                                        <view:CardKeyValue Title="DR ID"
+                                                           Value="1234567890" />
+                                        <view:CardKeyValue Title="Sex"
+                                                           Value="M" />
+                                        <view:CardKeyValue Title="Visit ID"
+                                                           Value="9045198190" />
+
+                                        <view:CardKeyValue Title="Some Prop.."
+                                                           Value="1234567890" />
+                                        <view:CardKeyValue Title="Some Prop.."
+                                                           Value="ggewra" />
+                                        <view:CardKeyValue Title="Some Prop.."
+                                                           Value="90fef451awefweaf190" />
+
+                                    </FlexLayout>
+                                </StackLayout>
+
+                            </ContentView>
+
+
+
+                        </StackLayout>
+
+
+
+
+                    </Frame>
+
+
+
+
+
+
+                    <view:MyCard
+                        IsClippedToBounds="False"
+                        Title="Lab report"
+                        x:Name="test2"
+                        FlexLayout.Basis="100%">
+                        <view:MyCard.InnerContent>
+                            <ContentView>
+                                <WebView  HeightRequest="300"
+                                          WidthRequest="300"
+                                          x:Name="webView"
+                                          FlexLayout.Basis="100%" />
+
+                            </ContentView>
+                        </view:MyCard.InnerContent>
+
+                    </view:MyCard>
+
+
+
+                    <view:MyCard
+                        IsClippedToBounds="False"
+                        VerticalOptions="StartAndExpand"
+                        FlexLayout.Basis="100%"
+                        Title="病人資料">
+                        <view:MyCard.InnerContent>
+                            <ContentView>
+                                <StackLayout>
+                                    <StackLayout Orientation="Vertical">
+
+                                        <view:CardKeyValue Title="DR ID"
+                                                           Value="1234567890" />
+                                        <view:CardKeyValue Title="Sex"
+                                                           Value="M" />
+                                        <view:CardKeyValue Title="Visit ID"
+                                                           Value="9045198190" />
+
+                                        <view:CardKeyValue Title="Some Prop.."
+                                                           Value="1234567890" />
+                                        <view:CardKeyValue Title="Some Prop.."
+                                                           Value="ggewra" />
+                                        <view:CardKeyValue Title="Some Prop.."
+                                                           Value="90fef451awefweaf190" />
+
+                                    </StackLayout>
+                                </StackLayout>
+
+                            </ContentView>
+                        </view:MyCard.InnerContent>
+
+                    </view:MyCard>
+
+
+
+
+                    <view:MyCard Title="Attachments"
+                                 FlexLayout.Basis="100%">
+                        <view:MyCard.InnerContent>
+                            <ContentView>
+                                <StackLayout>
+                                    <FlexLayout Wrap="Wrap"
+                                                JustifyContent="Start"
+                                                AlignItems="Center">
+                                        <Frame BackgroundColor="#BBC2C2"
+                                               Style="{StaticResource Key=testFrame}" />
+                                        <Frame BackgroundColor="#BBC2C2"
+                                               Style="{StaticResource Key=testFrame}" />
+                                        <Frame BackgroundColor="#BBC2C2"
+                                               Style="{StaticResource Key=testFrame}" />
+                                        <Frame BackgroundColor="#BBC2C2"
+                                               Style="{StaticResource Key=testFrame}" />
+                                        <Frame BackgroundColor="#BBC2C2"
+                                               Style="{StaticResource Key=testFrame}" />
+                                        <Frame BackgroundColor="#BBC2C2"
+                                               Style="{StaticResource Key=testFrame}" />
+                                        <Frame BackgroundColor="#BBC2C2"
+                                               Style="{StaticResource Key=testFrame}" />
+                                    </FlexLayout>
+                                </StackLayout>
+                            </ContentView>
+                        </view:MyCard.InnerContent>
+                    </view:MyCard>
+
+                </FlexLayout>
+
+            </StackLayout>
+        </ScrollView>
+
+    </ContentPage.Content>
+</ContentPage>
