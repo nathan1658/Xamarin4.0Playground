@@ -41,7 +41,7 @@
             </StackLayout>-->
 
             <StackLayout Grid.Row="1">
-                <FlexLayout Wrap="Wrap">
+                <FlexLayout Wrap="Wrap" Grid.Row="1">
                     <views:CardKeyValue Title="DR ID" Value="1234567890"/>
                     <views:CardKeyValue Title="Sex" Value="M"/>
                     <views:CardKeyValue Title="Visit ID" Value="9045198190"/>
@@ -60,7 +60,7 @@
 
 
             <!-- Dividers -->
-            <Frame Grid.Row="2" BackgroundColor="#E0E0E0" HeightRequest="0.5" HorizontalOptions="FillAndExpand"/>
+            <Frame Grid.Row="2" Padding="0" Margin="0" BackgroundColor="#E0E0E0" HeightRequest="0.5" HasShadow="False" HorizontalOptions="FillAndExpand"/>
 
             <StackLayout Grid.Row="3">
                 <Grid>
@@ -68,7 +68,7 @@
                         <ColumnDefinition Width="*"></ColumnDefinition>
                         <ColumnDefinition Width="auto"></ColumnDefinition>
                     </Grid.ColumnDefinitions>
-                <FlexLayout  Grid.Column="0" x:Name="chipsFlex" BackgroundColor="White" VerticalOptions="Start" JustifyContent="Start"  FlexLayout.Grow="1" Direction="Row" AlignItems="Start" AlignContent="Start" Wrap="Wrap">
+                <FlexLayout  Grid.Column="0" x:Name="chipsFlex" BackgroundColor="Transparent" VerticalOptions="Start" JustifyContent="Start"  FlexLayout.Grow="1" Direction="Row" AlignItems="Start" AlignContent="Start" Wrap="Wrap">
                 </FlexLayout>
                     <views:Chips Grid.Column="1" Background="{StaticResource  SecondaryColor}" Text="Need Action"/>
                 </Grid>

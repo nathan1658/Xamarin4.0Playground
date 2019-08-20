@@ -4,9 +4,10 @@
              xmlns:local="clr-namespace:VisualDemos"
              xmlns:views="clr-namespace:VisualDemos.Views"
              x:Class="VisualDemos.CardPage"
-             Title="Cards"             
+             Title="Cards"
+             Visual="Material"
              BackgroundColor="#fafafa"
-             Visual="Material">
+         >
     <ContentPage.Resources>
         
     </ContentPage.Resources>

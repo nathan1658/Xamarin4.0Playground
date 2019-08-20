@@ -3,7 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="VisualDemos.Views.Chips">
   <ContentView.Content>
-        <Frame Padding="18,8" HasShadow="False" CornerRadius="20"  x:Name="chipsBackground"  BorderColor="White" Margin="5">
+        <Frame Padding="20,10" HasShadow="False" CornerRadius="20"  x:Name="chipsBackground"  BorderColor="Transparent" Margin="5">
             <Label x:Name="label" TextColor="White" HorizontalOptions="Center" VerticalOptions="Center" FontSize="16"/>
         </Frame>
     </ContentView.Content>

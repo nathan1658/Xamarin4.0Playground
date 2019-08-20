@@ -2,7 +2,7 @@
 <ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="VisualDemos.Views.CardKeyValue"
-             BackgroundColor="White"
+             BackgroundColor="Transparent"
              Margin="10,5">
   <ContentView.Content>
         <StackLayout VerticalOptions="Start">
