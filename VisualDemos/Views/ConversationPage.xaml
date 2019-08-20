@@ -22,8 +22,7 @@
 
     </ContentPage.Resources>
     <ContentPage.Content>
-        <RelativeLayout HorizontalOptions="FillAndExpand" 
-                        VerticalOptions="FillAndExpand">
+        <Grid>
 
             <ScrollView>
                 <StackLayout Orientation="Vertical"
@@ -125,6 +124,9 @@
                 </StackLayout>
             </ScrollView>
             <Button
+                VerticalOptions="End"
+                HorizontalOptions="End"
+                Margin="0,0,35,50"
                 CornerRadius="25"
                 HeightRequest="50"
                 WidthRequest="50"
@@ -133,10 +135,8 @@
                 TextColor="White"
                 Visual="Default"
                 Text="Chat"
-                RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent,
-        Property=Width, Factor=1, Constant=-80}"
-                RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent,
-        Property=Height, Factor=1, Constant=-100}" />
-        </RelativeLayout>
+                x:Name="chatButton"
+              />
+        </Grid>
     </ContentPage.Content>
 </ContentPage>
