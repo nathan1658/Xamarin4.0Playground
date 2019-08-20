@@ -25,6 +25,21 @@ namespace VisualDemos.Views
             set { SetValue(InnerContentProperty, value); }
         }
 
+        public static readonly BindableProperty ActionButtonsProperty = BindableProperty.Create("ActionButtons", typeof(ContentView), typeof(MyCard), null);
+        public ContentView ActionButtons
+        {
+            get
+            {
+                return (ContentView)GetValue(ActionButtonsProperty);
+            }
+            set
+            {
+                SetValue(ActionButtonsProperty, value);
+            }
+        }
+
+
+
 
         public MyCard()
         {
@@ -47,8 +62,12 @@ namespace VisualDemos.Views
             if (propertyName == InnerContentProperty.PropertyName)
             {
                 innerContent.Content = InnerContent;
+            }
 
-
+            if(propertyName == ActionButtonsProperty.PropertyName)
+            {
+                actionButtons.Content = ActionButtons;
+                buttonDivider.IsVisible = ActionButtons != null;
             }
 
 

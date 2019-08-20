@@ -22,70 +22,37 @@
 
     </ContentPage.Resources>
     <ContentPage.Content>
+        <RelativeLayout HorizontalOptions="FillAndExpand"
+                        VerticalOptions="FillAndExpand">
 
-        <ScrollView>
+            <ScrollView>
+                <StackLayout Orientation="Vertical"
+                             VerticalOptions="Start">
 
-
-
-            <StackLayout Orientation="Vertical"
-                         VerticalOptions="Start">
-
-
-
-                <FlexLayout Wrap="Wrap"
-                            AlignItems="Start"
-                            IsClippedToBounds="False"
-                            JustifyContent="Center">
-
-
-                    <Frame
-                        IsVisible="false"
-                        Visual="Material"
-                        BackgroundColor="#FFFFFF"
-                        Padding="16"
+                    <view:MyCard
                         IsClippedToBounds="False"
-                        Margin="10"
-                        VerticalOptions="Start">
-
-                        <StackLayout Spacing="0"
-                                     IsClippedToBounds="False">
-
-                            <Label Text="DEFAULT_TITLE"
-                                   x:Name="titleLabel"
-                                   FontSize="24"
-                                   TextColor="{StaticResource TextColor}" />
-
-                            <ContentView x:Name="innerContent"
-                                         VerticalOptions="Start"
-                                         HorizontalOptions="Center">
-
-                                <StackLayout VerticalOptions="Start">
+                        VerticalOptions="StartAndExpand"                  
+                        Title="病人資料">
+                        <view:MyCard.InnerContent>
+                            <ContentView>
+                                <StackLayout>
                                     <FlexLayout Wrap="Wrap">
 
                                         <view:CardKeyValue Title="DR ID"
                                                            Value="1234567890" />
+
                                         <view:CardKeyValue Title="Sex"
                                                            Value="M" />
+
                                         <view:CardKeyValue Title="Visit ID"
                                                            Value="9045198190" />
 
                                         <view:CardKeyValue Title="Some Prop.."
                                                            Value="1234567890" />
-                                        <view:CardKeyValue Title="Some Prop.."
-                                                           Value="ggewra" />
-                                        <view:CardKeyValue Title="Some Prop.."
-                                                           Value="90fef451awefweaf190" />
-                                        <view:CardKeyValue Title="DR ID"
-                                                           Value="1234567890" />
-                                        <view:CardKeyValue Title="Sex"
-                                                           Value="M" />
-                                        <view:CardKeyValue Title="Visit ID"
-                                                           Value="9045198190" />
 
                                         <view:CardKeyValue Title="Some Prop.."
-                                                           Value="1234567890" />
-                                        <view:CardKeyValue Title="Some Prop.."
                                                            Value="ggewra" />
+
                                         <view:CardKeyValue Title="Some Prop.."
                                                            Value="90fef451awefweaf190" />
 
@@ -93,26 +60,15 @@
                                 </StackLayout>
 
                             </ContentView>
+                        </view:MyCard.InnerContent>
 
-
-
-                        </StackLayout>
-
-
-
-
-                    </Frame>
-
-
-
-
+                    </view:MyCard>
 
 
                     <view:MyCard
                         IsClippedToBounds="False"
                         Title="Lab report"
-                        x:Name="test2"
-                        FlexLayout.Basis="100%">
+                        x:Name="test2"                        >
                         <view:MyCard.InnerContent>
                             <ContentView>
                                 <WebView  HeightRequest="300"
@@ -122,53 +78,28 @@
 
                             </ContentView>
                         </view:MyCard.InnerContent>
-
-                    </view:MyCard>
-
-
-
-                    <view:MyCard
-                        IsClippedToBounds="False"
-                        VerticalOptions="StartAndExpand"
-                        FlexLayout.Basis="100%"
-                        Title="病人資料">
-                        <view:MyCard.InnerContent>
+                        <view:MyCard.ActionButtons>
                             <ContentView>
-                                <StackLayout>
-                                    <StackLayout Orientation="Vertical">
+                                <StackLayout Orientation="Horizontal"
+                                             Margin="0,5">
+                                    <Button BackgroundColor="{StaticResource Key=PrimaryColor}"
+                                            Text="Expand"></Button>
 
-                                        <view:CardKeyValue Title="DR ID"
-                                                           Value="1234567890" />
-                                        <view:CardKeyValue Title="Sex"
-                                                           Value="M" />
-                                        <view:CardKeyValue Title="Visit ID"
-                                                           Value="9045198190" />
-
-                                        <view:CardKeyValue Title="Some Prop.."
-                                                           Value="1234567890" />
-                                        <view:CardKeyValue Title="Some Prop.."
-                                                           Value="ggewra" />
-                                        <view:CardKeyValue Title="Some Prop.."
-                                                           Value="90fef451awefweaf190" />
-
-                                    </StackLayout>
                                 </StackLayout>
-
                             </ContentView>
-                        </view:MyCard.InnerContent>
-
+                        </view:MyCard.ActionButtons>
                     </view:MyCard>
-
 
 
 
                     <view:MyCard Title="Attachments"
-                                 FlexLayout.Basis="100%">
+                                 >
                         <view:MyCard.InnerContent>
                             <ContentView>
                                 <StackLayout>
                                     <FlexLayout Wrap="Wrap"
                                                 JustifyContent="Start"
+                                                AlignContent="Center"
                                                 AlignItems="Center">
                                         <Frame BackgroundColor="#BBC2C2"
                                                Style="{StaticResource Key=testFrame}" />
@@ -190,10 +121,21 @@
                         </view:MyCard.InnerContent>
                     </view:MyCard>
 
-                </FlexLayout>
-
-            </StackLayout>
-        </ScrollView>
-
+                </StackLayout>
+            </ScrollView>
+            <Button
+                CornerRadius="25"
+                HeightRequest="50"
+                WidthRequest="50"
+                BackgroundColor="red"
+                FontAttributes="Bold"
+                TextColor="White"
+                Visual="Default"
+                Text="Chat"
+                RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent,
+        Property=Width, Factor=1, Constant=-80}"
+                RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent,
+        Property=Height, Factor=1, Constant=-100}" />
+        </RelativeLayout>
     </ContentPage.Content>
 </ContentPage>

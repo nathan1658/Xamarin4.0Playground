@@ -8,6 +8,7 @@
     Visual="Material"
     BackgroundColor="#FFFFFF"
     Padding="16"
+    HorizontalOptions="FillAndExpand"
     IsClippedToBounds="False"
     Margin="10"
     VerticalOptions="Start">
@@ -33,18 +34,18 @@
         </ContentView>
 
         <Frame Padding="0"
-               Margin="0"
+               x:Name="buttonDivider"
+               Margin="0,5"
                CornerRadius="0"
                HasShadow="False"
                HeightRequest="0.5"
-               BackgroundColor="gray" />
+               BackgroundColor="gray"
+               IsVisible="false"
+               />
 
-        <StackLayout Orientation="Horizontal" Margin="0,5">
-            <Button BackgroundColor="{StaticResource Key=PrimaryColor}"
-                    Text="Action1"></Button>
-            <Button BackgroundColor="{StaticResource Key=PrimaryColor}"
-                    Text="Action2"></Button>
-        </StackLayout>
+        <ContentView x:Name="actionButtons"/>
+
+      
     </StackLayout>
 
 
