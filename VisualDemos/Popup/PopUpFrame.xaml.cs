@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using Rg.Plugins.Popup.Services;
 using Xamarin.Forms;
+using Xamarin.Forms.PlatformConfiguration.iOSSpecific;
 
 namespace VisualDemos.Popup
 {
@@ -24,8 +25,19 @@ namespace VisualDemos.Popup
         public PopUpFrame()
         {
             InitializeComponent();
-            
+         //   this.HasSystemPadding = false;
             closeButton.Clicked += CloseButton_Clicked;
+        }
+
+        protected override void OnAppearing()
+        {
+            base.OnAppearing();
+            return;
+            var safeAreaInset = On<Xamarin.Forms.PlatformConfiguration.iOS>().SafeAreaInsets();
+            
+            this.Padding = safeAreaInset;
+            safeAreaInset.Top = 0;
+            secGrid.Padding = safeAreaInset;
         }
 
         public PopUpFrame(View view):this()

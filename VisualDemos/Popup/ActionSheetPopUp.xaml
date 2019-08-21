@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<pages:PopupPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:pages="clr-namespace:Rg.Plugins.Popup.Pages;assembly=Rg.Plugins.Popup"
+    Visual="Material"
+    xmlns:animations="clr-namespace:VisualDemos.Animations"
+    x:Class="VisualDemos.Popup.ActionSheetPopUp">
+    <pages:PopupPage.Animation>
+        <animations:UserAnimation />
+    </pages:PopupPage.Animation>
+    <pages:PopupPage.Content>
+
+
+        <StackLayout  Grid.Row="1"
+                      BackgroundColor="White"
+                      x:Name="buttonStack"
+                      VerticalOptions="End">
+            <Label  Text="Please select an action:"
+                    Margin="10"
+                    TextColor="{StaticResource  HeaderTextColor}" />
+
+
+            <Button Text="Primary Color"
+                    Margin="10,5"
+                    BackgroundColor="{StaticResource PrimaryColor}" />
+            <Button Text="QuaternaryColor"
+                    Margin="10,5"
+                    BackgroundColor="{StaticResource  QuaternaryColor}" />
+            <Button Text="Primary Color"
+                    Margin="10,5"
+                    BackgroundColor="{StaticResource PrimaryColor}" />
+            <Button Text="QuaternaryColor"
+                    Margin="10,5"
+                    BackgroundColor="{StaticResource  QuaternaryColor}" />
+            <Button Text="QuinaryColor"
+                    Margin="10,5"
+                    BackgroundColor="{StaticResource QuinaryColor}" />
+            <Button Text="SecondaryColor"
+                    BackgroundColor="{StaticResource SecondaryColor}"
+                    Margin="10,5" />
+            <Button Text="TertiaryColor"
+                    BackgroundColor="{StaticResource TertiaryColor}"
+                    Margin="10,5" />
+            <Button Text="@@"
+                    Margin="10,5" />
+
+
+        </StackLayout>
+
+
+    </pages:PopupPage.Content>
+</pages:PopupPage>

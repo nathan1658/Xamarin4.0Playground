@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using Rg.Plugins.Popup.Services;
 using VisualDemos.Popup;
 using Xamarin.Forms;
+using Xamarin.Forms.PlatformConfiguration.iOSSpecific;
 
 namespace VisualDemos.Views
 {
@@ -87,6 +88,20 @@ tr:nth-child(even) {
 
             ExpandButton.Clicked += ExpandButton_Clicked;
             chatButton.Clicked += ChatButton_Clicked;
+            actionButton.Clicked += ActionButton_Clicked;
+            
+
+        }
+        protected override void OnAppearing()
+        {
+            base.OnAppearing();
+            var safeAreaInset = On<Xamarin.Forms.PlatformConfiguration.iOS>().SafeAreaInsets();
+
+            actionButtonFrame.Padding = safeAreaInset;
+        }
+        private void ActionButton_Clicked(object sender, EventArgs e)
+        {
+            PopupNavigation.Instance.PushAsync(new ActionSheetPopUp());
         }
 
         private void ChatButton_Clicked(object sender, EventArgs e)
