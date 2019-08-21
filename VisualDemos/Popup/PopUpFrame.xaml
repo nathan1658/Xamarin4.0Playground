@@ -3,20 +3,21 @@
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     x:Class="VisualDemos.Popup.PopUpFrame"
-
     xmlns:pages="clr-namespace:Rg.Plugins.Popup.Pages;assembly=Rg.Plugins.Popup"
     xmlns:animations="clr-namespace:VisualDemos.Animations"
+    Padding="0"
+    HasSystemPadding="True"
+    SystemPaddingSides="Top"
+    
     Visual="Material">
     <pages:PopupPage.Animation>
         <animations:UserAnimation />
     </pages:PopupPage.Animation>
 
-    <Grid VerticalOptions="FillAndExpand"
-          x:Name="mainGrid"
-          HorizontalOptions="FillAndExpand"
-          BackgroundColor="TransParent">
+    <ContentView BackgroundColor="White"
+                 VerticalOptions="FillAndExpand"
+                 HorizontalOptions="FillAndExpand">
         <Frame Padding="0"
-
                BackgroundColor="White"
                HasShadow="False"
                Visual="Default"
@@ -36,9 +37,11 @@
                             x:Name="closeButton"
                             Text="Close" />
                 </StackLayout>
-                <ContentView Grid.Row="1" x:Name="innerContent"/>
+                <ContentView Grid.Row="1"
+                             x:Name="innerContent" />
             </Grid>
         </Frame>
-    </Grid>
+    </ContentView>
+
 
 </pages:PopupPage>
